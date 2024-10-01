@@ -61,8 +61,6 @@ if ($pdo) {
             $errors = validate($data);
 
             if (empty($errors)) {
-                // Here you can add code to save the user to the database
-                // For now, we will simulate a successful registration
                 $stmt = $pdo->prepare("INSERT INTO users (first_name, last_name, email, timezone) VALUES (:fname, :lname, :email, :timezone)");
                 $stmt->execute([
                     ':fname' => $fname,

@@ -55,7 +55,7 @@ class MyController
 
             // Prepare an array to store users and their matching users
             $users_with_matches = [];
-            // Step 2: For each user, find matching users with the same timezone and at least one matching hobby
+            // For each user, find matching users with the same timezone and at least one matching hobbies
             foreach ($users as &$user) {
                 // Convert the hobbies string to an array
                 $user_hobbies = explode(',', $user['hobbies']);
@@ -86,7 +86,7 @@ class MyController
                 $users_with_matches[] = $user;
             }
 
-            // Output the result
+
             // echo "<pre>";
             return $users_with_matches;
             // echo "</pre>";
